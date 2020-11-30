@@ -33,7 +33,7 @@
        margin-top: 20px;
        width: 70%;
        /* border-radius: 50%; */
-       padding: 2px; 
+       padding: 2px 2px 2px 30px; 
        transform: none;
    }
    .polaroid:hover {
