@@ -1,0 +1,58 @@
+@media screen and (max-width: 900px) {
+   #menu {
+       display: none;
+       float: none;
+       margin-top: 10px;
+       position: absolute;
+       width: 100%;
+
+   }
+   #menu a {
+       display: block;
+       text-align: center;
+       background: var(--azul-escuro);
+   }
+   header div{
+       width: 100%;
+   }
+   .container {
+       width: 100%;
+   }
+   h1 {
+       font-size: 28px;
+       animation: none;
+   }
+   p {
+       font-size: 14px;
+   }
+   section {
+       width: 100%;
+       padding: 20px;
+   }
+   .polaroid {
+       margin-top: 20px;
+       width: 70%;
+       /* border-radius: 50%; */
+       padding: 2px; 
+       transform: none;
+   }
+   .polaroid:hover {
+        /* animation: none; */
+
+   }
+   aside {
+       width: 100% !important;
+       margin: 0 !important;
+       /* text-align centraliza na tela elementos do tipo TEXTO e INLINE */
+       text-align: center;
+   }
+   #burger {
+        display: block;
+   }
+    .maquina-de-escrever {
+    width: auto;
+   }
+   iframe {
+       display: none;
+   }
+}

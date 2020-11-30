@@ -1,0 +1,72 @@
+#redes-sociais{
+    /* border: 1px solid yellow; */
+    margin-top: 50px;
+
+}
+#redes-sociais a{
+    border: 2px solid var(--cor-menu-hover);
+    /* o valor de border-radius em 50% transforma qualquer quadrado em círculo */
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    transition: background 1s;
+}
+#redes-sociais a:last-child{
+    margin-right: 0;
+}
+#redes-sociais a:hover{
+    background: var(--cor-menu-hover);
+}
+h1{
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: escrever 3.5s steps(25), cursor_piscando .5s 10;
+
+}
+.maquina-de-escrever{
+    width: 618px;
+}
+@keyframes escrever{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes cursor_piscando{
+    from,
+    to{
+        border-right: 6px solid white;
+    }
+    50%{
+            border-right: none;
+        }
+}
+.polaroid{
+    width: 80%;
+    background: white;
+    padding: 10px 10px 80px 10px;
+    transform: rotate(10deg);
+   
+}
+@keyframes polaroid{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(9deg);
+    }
+    100%{
+        transform:rotate(10deg);
+    }
+}
+.polaroid:hover{
+    animation-name: polaroid;
+    animation-duration: 0.1s;
+    animation-iteration-count: 7;
+    animation-timing-function: step-start;
+}

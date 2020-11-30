@@ -1,0 +1,159 @@
+/* Definição de fonte custumizada */
+@font-face{
+    font-family: Poppins;
+    src:url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+:root{
+    /* conceito de variáveis em CSS abaixo */
+    --azul-medio: #24263B;
+    --azul-escuro:#1F2235;
+    --cor-menu-hover: #6b4aff;
+    --cor-menu: #FFFFFF
+}
+
+body{
+    background: var(--azul-medio);
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+header{
+    background: var(--azul-escuro);
+    padding: 30px 0;
+    /* workaround - display:inline-table vai corrigir o problema do scroll não pintar o fundo do header, porém nao vai esticar 100% em tela cheia */
+    display: inline-table;
+    width: 100%;
+}
+
+header div{
+   /* border: 1px solid red;  */
+   width: 1170px;
+   margin: 0 auto; /*centraliza a div na tela*/
+   }
+
+/* ---------------ESTRUTURA DO MENU--------------- */
+#menu{
+    /* border: 1px solid white; */
+    float: right;
+}
+
+#menu a{
+    color: var(--cor-menu);
+    text-decoration: none;
+    padding: 11.2px 20px;
+    font-size: 18px;
+    display: inline-block;
+    transition: color 0.5s;
+}
+
+#menu a:hover{
+    color: var(--cor-menu-hover)
+}
+
+#menu a.ativo{
+    background: var(--cor-menu-hover);
+    color: var(--cor-menu);
+    box-shadow: 4px -2px 6px 6px #313444;
+}
+
+#burger {
+    /* border: 1px solid white; */
+    display: none;
+    width: 40px;
+    height: 32px;
+    padding: 8px 4px 0px 4px;
+    float: right;
+    margin-right: 10px;
+}
+
+#burger div{
+    width: 80%;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+}
+
+/* active, assim como o hover, é uma pseudopropriedade (quando o usuario clica/ativa o link) */
+#burger:active div:nth-child(2){
+    width: 60%;
+}
+
+/* ==========configuração do conteúdo do site========== */
+.container{
+    /* border: 1px solid greenyellow; */
+    width: 1170px;
+    height: calc(100% - 105px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+section{
+    /* border: 1px solid red; */
+    width: 100%;
+    color: var(--cor-menu);
+
+}
+aside{
+    display: inline-block;
+    /* alinhar os elementos no topo */
+    vertical-align: top;
+
+}
+aside:first-child{
+    width: 660px;
+    margin-right: 100px;
+}
+
+aside:last-child{
+    width: 400px;
+}
+
+@keyframes efeito-logotipo {
+    16.65% {
+      -webkit-transform: skew(-12deg);
+      transform: skew(-12deg);
+    }
+    33.3% {
+      -webkit-transform: skew(10deg);
+      transform: skew(10deg);
+    }
+    49.95% {
+      -webkit-transform: skew(-6deg);
+      transform: skew(-6deg);
+    }
+    66.6% {
+      -webkit-transform: skew(4deg);
+      transform: skew(4deg);
+    }
+    83.25% {
+      -webkit-transform: skew(-2deg);
+      transform: skew(-2deg);
+    }
+    100% {
+      -webkit-transform: skew(0);
+      transform: skew(0);
+    }
+  }
+
+  .efeito-logotipo {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+  }
+  
+  .efeito-logotipo:hover, .efeito-logotipo:focus, .efeito-logotipo:active {
+    -webkit-animation-name: efeito-logotipo;
+    animation-name: efeito-logotipo;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
